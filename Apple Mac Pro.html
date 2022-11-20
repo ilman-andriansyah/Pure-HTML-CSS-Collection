@@ -1,0 +1,1004 @@
+<!---Source :  https://codepen.io/FilipVitas/pen/LoawEK--->
+<html>
+	<head>
+		<title>Pure CSS Apple Mac Pro</title>
+		<!--
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		-->
+		<style type="text/css">
+		*,
+		*:before,
+		*:after {
+		  box-sizing: border-box;
+		}
+		body {
+		  width: 100vw;
+		  height: 100vh;
+		}
+		.inspiration {
+		  position: fixed;
+		  bottom: 0;
+		  right: 0;
+		  padding: 10px;
+		  text-align: center;
+		  text-decoration: none;
+		  font-family: 'Gill Sans', sans-serif;
+		  font-size: 12px;
+		  color: #7f7f7f;
+		}
+		.center {
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  display: flex;
+		  align-items: center;
+		  transform: translate(-50%, -50%) scale(1.1);
+		}
+		@media screen and (max-height: 500px) {
+		  .center {
+			transition: transform 0.5s;
+			transform: translate(-50%, -50%) scale(0.8);
+		  }
+		}
+		.case-front {
+		  background-color: #e9eaec;
+		  background: linear-gradient(to right, #b9babc, #e9eaec 5%, #e9eaec 95%, #b9babc 100%);
+		  padding: 10px 15px;
+		  transform: scale(0.7);
+		}
+		.case-side {
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  width: 500px;
+		  height: 460px;
+		  background: linear-gradient(to right, #b9babc, #e9eaec 5%, #e9eaec 95%, #b9babc 100%);
+		  transform: scale(0.7);
+		  margin-left: -60px;
+		}
+		.case-side .apple-logo {
+		  width: 100px;
+		  filter: brightness(30%);
+		}
+		.handle {
+		  position: absolute;
+		  top: -62px;
+		  left: 50%;
+		  width: 250px;
+		  height: 110px;
+		  border-radius: 30px 30px 0 0;
+		  transform: translateX(-50%) scale(0.7);
+		  box-shadow: 0 0 0 5px #c4c4c4, 0 0 0 9px #888787, 0 0 0 13px #fff, 0 0 0 16px #ddd, 0 0 0 18px #aaa;
+		  -webkit-clip-path: inset(-20px -20px 45px -20px);
+				  clip-path: inset(-20px -20px 45px -20px);
+		}
+		.circle-row {
+		  display: grid;
+		  grid-template-columns: repeat(8, 28px);
+		  grid-template-rows: repeat(1, 20px);
+		  height: 21px;
+		}
+		.circle-row.shifted {
+		  transform: translateX(14px);
+		}
+		.circle {
+		  place-self: center;
+		  width: 100px;
+		  height: 100px;
+		  border-radius: 50%;
+		  background: radial-gradient(circle at 30% 40%, #fff 10%, #888 50%);
+		  box-shadow: inset 0px 0px 30px -2px #000;
+		  transform: scale(0.22);
+		}
+		.circle .top {
+		  position: absolute;
+		  width: 50px;
+		  height: 35px;
+		  border-radius: 50%;
+		  background-color: #000;
+		  transform: translateX(25px) translateY(1px);
+		}
+		.circle .left {
+		  position: absolute;
+		  width: 50px;
+		  height: 35px;
+		  border-radius: 50%;
+		  background-color: #000;
+		  transform: translateX(-1px) translateY(50px) rotate(60deg);
+		}
+		.circle .right {
+		  position: absolute;
+		  width: 50px;
+		  height: 35px;
+		  border-radius: 50%;
+		  background-color: #000;
+		  transform: translateX(51px) translateY(50px) rotate(-60deg);
+		}
+		.foot {
+		  position: absolute;
+		  bottom: -40px;
+		  width: 25px;
+		  height: 40px;
+		  border-bottom: 2px solid #777;
+		  background: linear-gradient(to right, #8a8a8a, #c4c4c4, #888787, #fff, #ddd, #828282);
+		}
+		.foot:after {
+		  content: '';
+		  width: 60px;
+		  height: 5px;
+		  position: absolute;
+		  bottom: -6px;
+		  left: -17px;
+		  background: linear-gradient(to right, #8a8a8a, #c4c4c4, #888787, #fff, #ddd, #828282);
+		  border-bottom: 1px solid #777;
+		}
+		.foot.foot-left {
+		  left: 25px;
+		  transform: scale(-1, 1);
+		}
+		.foot.foot-right {
+		  right: 25px;
+		}
+		</style>
+		<script type="text/javascript">
+		//     ¯\_(ツ)_/¯     \\
+		</script>
+	</head>
+	<body>
+	<!---HTML Pug
+.center
+  .case-front
+    .handle
+    each val, row in new Array(21)
+      - let evenRow = row % 2 === 0
+      .circle-row(class=(evenRow ? '' : 'shifted'))
+        - let circleNumber = evenRow ? 8 : 7
+        each val, column in new Array(circleNumber)
+          .circle
+            if (row !== 0)
+              .top
+            if (!evenRow || column !== 0)
+              .left
+            if (column !== 7)
+              .right
+
+    .foot.foot-left
+    .foot.foot-right
+    
+  .case-side
+    img.apple-logo(src="http://pngimg.com/uploads/apple_logo/apple_logo_PNG19670.png")
+    .foot.foot-left
+    .foot.foot-right
+	--->
+	
+<div class="center">
+  <div class="case-front">
+    <div class="handle"></div>
+    <div class="circle-row">
+      <div class="circle">
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="left"></div>
+      </div>
+    </div>
+    <div class="circle-row shifted">
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+    </div>
+    <div class="circle-row">
+      <div class="circle">
+        <div class="top"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+      </div>
+    </div>
+    <div class="circle-row shifted">
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+    </div>
+    <div class="circle-row">
+      <div class="circle">
+        <div class="top"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+      </div>
+    </div>
+    <div class="circle-row shifted">
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+    </div>
+    <div class="circle-row">
+      <div class="circle">
+        <div class="top"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+      </div>
+    </div>
+    <div class="circle-row shifted">
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+    </div>
+    <div class="circle-row">
+      <div class="circle">
+        <div class="top"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+      </div>
+    </div>
+    <div class="circle-row shifted">
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+    </div>
+    <div class="circle-row">
+      <div class="circle">
+        <div class="top"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+      </div>
+    </div>
+    <div class="circle-row shifted">
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+    </div>
+    <div class="circle-row">
+      <div class="circle">
+        <div class="top"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+      </div>
+    </div>
+    <div class="circle-row shifted">
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+    </div>
+    <div class="circle-row">
+      <div class="circle">
+        <div class="top"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+      </div>
+    </div>
+    <div class="circle-row shifted">
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+    </div>
+    <div class="circle-row">
+      <div class="circle">
+        <div class="top"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+      </div>
+    </div>
+    <div class="circle-row shifted">
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+    </div>
+    <div class="circle-row">
+      <div class="circle">
+        <div class="top"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+      </div>
+    </div>
+    <div class="circle-row shifted">
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+    </div>
+    <div class="circle-row">
+      <div class="circle">
+        <div class="top"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="circle">
+        <div class="top"></div>
+        <div class="left"></div>
+      </div>
+    </div>
+    <div class="foot foot-left"></div>
+    <div class="foot foot-right"></div>
+  </div>
+  <div class="case-side">
+  <!---<img class="apple-logo" src="http://pngimg.com/uploads/apple_logo/apple_logo_PNG19670.png"/>--->
+    <div class="foot foot-left"></div>
+    <div class="foot foot-right"></div>
+  </div>
+</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+

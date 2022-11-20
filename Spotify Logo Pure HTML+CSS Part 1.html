@@ -1,0 +1,97 @@
+<!---Source :  https://codepen.io/isinkler/pen/GpqOdw--->
+<html>
+	<head>
+		<title></title>
+		<!--
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		-->
+		<style type="text/css">
+		* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #292929;
+  height: 100%;
+}
+
+.logo {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: #00E461;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.logo .line {
+  position: relative;
+  height: 100px;
+  width: 180px;
+  border: 20px solid #1A0E13;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  transform: rotate(6deg);
+  -webkit-transform: rotate(6deg);
+  -moz-transform: rotate(6deg);
+}
+.logo .line::before, .logo .line::after {
+  content: "";
+  position: absolute;
+  height: 19px;
+  width: 18px;
+  background: #1A0E13;
+  border-radius: 50%;
+}
+.logo .line::before {
+  top: -4px;
+  left: -3px;
+}
+.logo .line::after {
+  top: -4px;
+  right: -3px;
+}
+
+.top {
+  top: 50px;
+  left: 10px;
+}
+
+.middle {
+  top: -26px;
+  left: 5px;
+  transform: rotate(6deg) scale(0.8) !important;
+  -webkit-transform: rotate(6deg) scale(0.8) !important;
+  -moz-transform: rotate(6deg) scale(0.8) !important;
+}
+
+.bottom {
+  top: -105px;
+  left: 2px;
+  transform: rotate(6deg) scale(0.6) !important;
+  -webkit-transform: rotate(6deg) scale(0.6) !important;
+  -moz-transform: rotate(6deg) scale(0.6) !important;
+}
+		</style>
+		<script type="text/javascript">
+		
+		</script>
+	</head>
+	<body>
+	<div class="logo">
+  <div class="line top"></div>
+  <div class="line middle"></div>
+  <div class="line bottom"></div>
+</div>
+	</body>
+</html>

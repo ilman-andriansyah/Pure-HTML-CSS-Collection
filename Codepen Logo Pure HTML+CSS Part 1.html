@@ -1,0 +1,100 @@
+<!---Source :  https://codepen.io/DanielPintilei/pen/qNYZrV--->
+<html>
+	<head>
+		<title></title>
+		<!--
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		-->
+		<style type="text/css">
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+}
+.codepen {
+  position: relative;
+  width: 81.53846153846153px;
+  height: 50.76923076923077px;
+  transform-style: preserve-3d;
+  transform: rotateX(-43deg) rotateY(-45deg);
+  -webkit-animation: cRotate 3s forwards ease-in-out infinite 2s;
+          animation: cRotate 3s forwards ease-in-out infinite 2s;
+}
+.face {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: 4px;
+  border: 6.923076923076922px solid #fff;
+  box-shadow: 0 0 0 5.384615384615384px #fff;
+  background-color: transparent;
+}
+.face.front {
+  transform: translate3d(0, 0, 40.76923076923077px);
+}
+.face.back {
+  transform: rotateY(180deg) translate3d(0, 0, 40.76923076923077px);
+}
+.face.left {
+  transform: rotateY(-90deg) translate3d(0, 0, 40.76923076923077px);
+}
+.face.right {
+  transform: rotateY(90deg) translate3d(0, 0, 40.76923076923077px);
+}
+.face.top {
+  width: 81.53846153846153px;
+  height: 81.53846153846153px;
+  transform: rotateX(90deg) translate3d(0, 0, 40.76923076923077px);
+}
+.face.bottom {
+  width: 81.53846153846153px;
+  height: 81.53846153846153px;
+  bottom: 0;
+  transform: rotateX(-90deg) translate3d(0, 0, 40.76923076923077px);
+}
+@-webkit-keyframes cRotate {
+  0% {
+    transform: rotateX(-43deg) rotateY(-45deg);
+  }
+  40%, 60% {
+    transform: rotateX(-43deg) rotateY(315deg);
+  }
+  80%, 100% {
+    transform: rotateX(-223deg) rotateY(315deg);
+  }
+}
+@keyframes cRotate {
+  0% {
+    transform: rotateX(-43deg) rotateY(-45deg);
+  }
+  40%, 60% {
+    transform: rotateX(-43deg) rotateY(315deg);
+  }
+  80%, 100% {
+    transform: rotateX(-223deg) rotateY(315deg);
+  }
+}
+		
+		</style>
+		<script type="text/javascript">
+		
+		</script>
+	</head>
+	<body>
+<div class="codepen">
+  <div class="face front"></div>
+  <div class="face back"></div>
+  <div class="face top"></div>
+  <div class="face bottom"></div>
+  <div class="face left"></div>
+  <div class="face right"></div>
+</div>	
+	</body>
+</html>

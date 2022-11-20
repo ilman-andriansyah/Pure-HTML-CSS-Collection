@@ -1,0 +1,66 @@
+<!---Source :  https://blog.codepen.io/2016/05/13/new-instagram-logo-in-css-four-ways/--->
+<!---Source :  https://codepen.io/katydecorah/pen/PNLePj--->
+<html>
+	<head>
+		<title></title>
+		<!--
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		-->
+		<style type="text/css">
+			*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate3d(0, 0, 0);
+}
+
+.instagram {
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+  border-radius: 0.2em;
+  font-size: 50vmin;
+  height: 1em;
+  position: relative;
+  width: 1em;
+}
+.instagram:before, .instagram:after {
+  color: #fff;
+  content: "";
+  display: block;
+  position: absolute;
+  border: 0.075em solid;
+}
+.instagram:before {
+  border-radius: inherit;
+  height: 0.75em;
+  transform: translate(0.125em, 0.125em);
+  width: 0.75em;
+}
+.instagram:after {
+  border-radius: 1em;
+  box-shadow: 0.2em -0.2em 0 -0.16em;
+  height: 0.4em;
+  transform: translate(0.3em, 0.3em);
+  width: 0.4em;
+}
+		</style>
+		<script type="text/javascript">
+		
+		</script>
+	</head>
+	<body>
+		<div class='instagram'></div>
+	</body>
+</html>

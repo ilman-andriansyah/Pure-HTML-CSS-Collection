@@ -1,0 +1,104 @@
+<!---Source :  https://codepen.io/inalabs/pen/PPEboz--->
+<html>
+	<head>
+		<title>Logo Pertamina With CSS</title>
+		<!--
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		-->
+		<style type="text/css">
+			body {
+			  background:#fff;
+			  font-family: "Arial Black", Arial, sans-serif;
+			}
+			#pertamina {
+				margin: auto;
+				width: 380px;
+				height: 440px;
+				position: relative;
+				overflow: hidden;
+			}
+			 
+			.merah {
+				-moz-transform: skew(33deg); /* Firefox */
+				-webkit-transform: skew(33deg); /* Chrome & Safari */
+				-o-transform: skew(33deg); /* Opera */
+				-ms-transform: skew(33deg); /* IE9 */
+				transform: skew(33deg);
+				background: #fd0017;
+				border-radius: 0 19px 0 19px;
+				height: 99px;
+				left: 231px;
+				position: absolute;
+				top: 72.5px;
+				width: 116px;
+			}
+			 
+			.hijau {
+				-moz-transform: skew(-33deg); /* Firefox */
+				-webkit-transform: skew(-33deg); /* Chrome & Safari */
+				-o-transform: skew(-33deg); /* Opera */
+				-ms-transform: skew(-33deg); /* IE9 */
+				transform: skew(-33deg);
+				background: #9fe400;
+				border-radius: 19px 0 19px 0;
+				height: 98px;
+				left: 231px;
+				position: absolute;
+				top: 194.5px;
+				width: 116px;
+			}
+			 
+			.biru {
+				-moz-transform: skew(-33deg); /* Firefox */
+				-webkit-transform: skew(-33deg); /* Chrome & Safari */
+				-o-transform: skew(-33deg); /* Opera */
+				-ms-transform: skew(-33deg); /* IE9 */
+				transform: skew(-33deg);
+				background: #0073fe;
+				border-radius: 19px 0 19px 0;
+				height: 165.5px;
+				left: 55px;
+				position: absolute;
+				top: 194.5px;
+				width: 116px;
+			}
+			.biru-ujung {
+				-moz-transform: skew(-2deg); /* Firefox */
+				-webkit-transform: skew(-1deg); /* Chrome & Safari */
+				-o-transform: skew(0deg); /* Opera */
+				-ms-transform: skew(-1deg); /* IE9 */
+				transform: skew(-1deg);
+				background-color: #efefef;
+				border-top-left-radius: 9px;
+				box-shadow: -9px 0 0 #0073fe;
+				content: "";
+				height: 13px;
+				position: absolute;
+				right: -13px;
+				top: 0;
+				width: 13px;
+			}
+			.tulisan-pertamina {
+				bottom: -60px;
+				font-family: "Arial Black", Arial, sans-serif;
+				font-size: 56.5px;
+				font-weight: 900;
+				left: -1px;
+				position: absolute;
+				text-transform: uppercase;
+			}		
+		</style>
+		<script type="text/javascript">
+			<!---	// Pure CSS --->
+		</script>
+	</head>
+	<body>
+		<div id="pertamina">
+			<div class="merah"></div>
+			<div class="hijau"></div>
+			<div class="biru"> <class="biru-ujung"> </div>
+			<p class="tulisan-pertamina">Pertamina</p>
+		</div>	
+	</body>
+</html>

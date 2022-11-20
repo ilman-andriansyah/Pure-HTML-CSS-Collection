@@ -1,0 +1,116 @@
+<!---Source :  https://codepen.io/oliverholretz/pen/aOzNjp--->
+<html>
+	<head>
+		<title></title>
+		<!--
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		-->
+		<style type="text/css">
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.container {
+  position: relative;
+  background: #3B579D;
+  display: block;
+  border-radius: 5.8%;
+  margin: 20px auto;
+  width: 28%;
+}
+.container:after {
+  display: block;
+  content: '';
+  padding-bottom: 100%;
+}
+.container .fBase,
+.container .crossSkew,
+.container .crossStraight,
+.container .fTop,
+.container .fCurve,
+.container fTop {
+  z-index: 2;
+  background: #fff;
+  display: block;
+  position: absolute;
+}
+.container .largeCurvestop,
+.container .smallCurve {
+  background: #3A579D;
+  display: block;
+  position: absolute;
+}
+.container .fBase {
+  bottom: 0;
+  right: 31%;
+  height: 68%;
+  width: 15.7%;
+}
+.container .crossSkew {
+  bottom: 38.8%;
+  right: 17%;
+  height: 15%;
+  width: 16%;
+  transform: skewX(-8deg);
+}
+.container .crossStraight {
+  bottom: 38.8%;
+  left: 40.3%;
+  height: 15%;
+  width: 13.1%;
+}
+.container .fCurve {
+  top: 15%;
+  left: 53.4%;
+  width: 36%;
+  height: 36%;
+  border-radius: 50%;
+}
+.container .largeCurvestop {
+  z-index: 998;
+  top: 14.3%;
+  right: 2.5%;
+  width: 13%;
+  height: 15%;
+}
+.container .smallCurve {
+  z-index: 997;
+  top: 29.1%;
+  right: 10%;
+  width: 21%;
+  height: 17.1%;
+  border-top-left-radius: 33%;
+}
+.container .fTop {
+  z-index: 1;
+  top: 15.01%;
+  left: 62%;
+  width: 35%;
+  height: 9%;
+  border-radius: 50%;
+  transform: rotateZ(4deg);
+}
+		
+		</style>
+		<script type="text/javascript">
+		
+		</script>
+	</head>
+	<body>
+   <div class="container">
+     <div class="fBase"></div>
+     <div class="crossSkew"></div>
+     <div class="crossStraight"></div>
+     <div class="fCurve"></div>
+     <div class="largeCurvestop"></div>
+     <div class="smallCurve"></div>
+     <div class="fTop"></div>
+   </div>	
+	</body>
+</html>

@@ -1,0 +1,79 @@
+<!---Source :  https://codepen.io/rpdasilva/pen/pJsof--->
+<html>
+	<head>
+		<title></title>
+		<!--
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		-->
+		<style type="text/css">
+		.twitter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  background-color: #333;
+}
+
+.twitter {
+  height: 15em;
+  width: 16em;
+  border: none;
+  border-radius: 15%;
+  font-size: 1em;
+  overflow: hidden;
+  background-color: #FFF;
+  box-shadow: 0 0 3em rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+.twitter::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 5.125em;
+  width: 5.125em;
+  margin-top: -5.125em;
+  border-radius: 100%;
+  background-color: #61BFE8;
+  box-shadow: 1.1em -6.05em 0 1.85em #FFF, 1.2em -3.12em 0 -0.15em #61BFE8, 1.975em -5.35em 0 1.84em #FFF, 1.5em -2.2em 0 -0.125em #61BFE8, -2.1em -6.7em 0 4.75em #FFF, -5.5em -0.8em 0 0.07em #61BFE8, -7.2em -1.35em 0 0.07em #FFF, -5.5em 1em 0 0.07em #61BFE8, -6.8em 1.1em 0 0.07em #FFF, -4.7em 2.8em 0 0.07em #61BFE8, -8.3em 1.175em 0 2.775em #FFF, -8.275em -6.575em 0 2.775em #FFF, -4.75em 0.35em 0 4.75em #61BFE8;
+}
+.twitter::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 5%, rgba(255, 255, 255, 0) 80%);
+}
+.twitter:hover {
+  box-shadow: 0 0 3.5em rgba(0, 0, 0, 0.7);
+}
+.twitter:hover::after {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0.1) 80%);
+}
+.twitter:active {
+  box-shadow: 0 0 3.5em rgba(0, 0, 0, 0.7);
+}
+.twitter:active::after {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 5%, rgba(0, 0, 0, 0.2) 80%);
+}
+.twitter:focus {
+  outline: none;
+  border: 5px solid #34ade2;
+}
+		</style>
+		<script type="text/javascript">
+		
+		</script>
+	</head>
+	<body>
+	<div class="twitter"></div>
+	</body>
+</html>

@@ -1,0 +1,134 @@
+<!---Source :  https://codepen.io/ekwonye/pen/bojqmQ--->
+<html>
+	<head>
+		<title>Spotify logo with css</title>
+		<!--
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		-->
+		<style type="text/css">
+			body {
+			  padding: calc(50vh - 175px);
+			  text-align: center;
+			}
+
+			.circle {
+			  display: inline-block;
+			  width: 350px;
+			  height: 350px;
+			  border-radius: 50%;
+			  background: #1DB954;
+			  overflow: hidden;
+			}
+			.circle .curve-1 {
+			  display: inline-block;
+			  width: 175px;
+			  height: 70px;
+			  border-radius: 50%;
+			  border: 20px solid;
+			  border-color: #ffffff transparent transparent transparent;
+			  transform: rotate(7deg) scale(1.4);
+			  position: relative;
+			  left: -3px;
+			  top: 130px;
+			}
+			.circle .curve-1:before {
+			  content: " ";
+			  display: inline-block;
+			  width: 1.135em;
+			  height: 1.135em;
+			  border-radius: 50%;
+			  background: #ffffff;
+			  position: absolute;
+			  left: 0.05em;
+			  top: -0.098em;
+			}
+			.circle .curve-1:after {
+			  content: " ";
+			  display: inline-block;
+			  width: 1.135em;
+			  height: 1.135em;
+			  border-radius: 50%;
+			  background: #ffffff;
+			  position: absolute;
+			  right: 0.05em;
+			  top: -0.098em;
+			}
+			.circle .curve-2 {
+			  display: inline-block;
+			  width: 175px;
+			  height: 70px;
+			  border-radius: 50%;
+			  border: 20px solid;
+			  border-color: #ffffff transparent transparent transparent;
+			  transform: rotate(7deg) scale(1.2);
+			  position: relative;
+			  left: -3px;
+			  top: 55px;
+			}
+			.circle .curve-2:before {
+			  content: " ";
+			  display: inline-block;
+			  width: 1.135em;
+			  height: 1.135em;
+			  border-radius: 50%;
+			  background: #ffffff;
+			  position: absolute;
+			  left: 0.05em;
+			  top: -0.098em;
+			}
+			.circle .curve-2:after {
+			  content: " ";
+			  display: inline-block;
+			  width: 1.135em;
+			  height: 1.135em;
+			  border-radius: 50%;
+			  background: #ffffff;
+			  position: absolute;
+			  right: 0.05em;
+			  top: -0.098em;
+			}
+			.circle .curve-3 {
+			  display: inline-block;
+			  width: 175px;
+			  height: 70px;
+			  border-radius: 50%;
+			  border: 20px solid;
+			  border-color: #ffffff transparent transparent transparent;
+			  transform: rotate(7deg) scale(1);
+			  position: relative;
+			  left: -3px;
+			  top: -23px;
+			}
+			.circle .curve-3:before {
+			  content: " ";
+			  display: inline-block;
+			  width: 1.135em;
+			  height: 1.135em;
+			  border-radius: 50%;
+			  background: #ffffff;
+			  position: absolute;
+			  left: 0.05em;
+			  top: -0.098em;
+			}
+			.circle .curve-3:after {
+			  content: " ";
+			  display: inline-block;
+			  width: 1.135em;
+			  height: 1.135em;
+			  border-radius: 50%;
+			  background: #ffffff;
+			  position: absolute;
+			  right: 0.05em;
+			  top: -0.098em;
+			}
+		</style>
+	</head>
+	<body>
+		<span class="circle">
+		  <span class="curve-1"></span>
+		  <span class="curve-2"></span>
+		  <span class="curve-3"></span>
+		</span>	
+	</body>
+</html>

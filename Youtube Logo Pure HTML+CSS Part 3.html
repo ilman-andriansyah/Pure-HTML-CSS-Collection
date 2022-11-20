@@ -1,0 +1,57 @@
+<!---Source :  https://jsfiddle.net/esedic/g7vLh47r/--->
+<html>
+	<head>
+		<title></title>
+		<!--
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		-->
+		<style type="text/css">
+			body {
+			  padding: 1em;
+			  background: #fff;
+			}
+			.container {
+			  width: 480px;
+			  height: 320px;
+			  background: url("http://i.ytimg.com/vi/Ix6xD7F-y8E/sddefault.jpg") no-repeat 50% 50% transparent;
+			  -webkit-transform-style: preserve-3d;
+			  -moz-transform-style: preserve-3d;
+			  transform-style: preserve-3d;
+			  cursor: pointer;
+			}
+			.wrapper {
+			  background: rgba(0,0,0,0.55);
+			  width: 50px;
+			  height: 24px;
+			  border-radius: 5px;
+			  padding-top: 10px;
+			  position: relative;
+			  margin: 0 auto;
+			  top: 50%;
+			  -webkit-transform: translateY(-50%);
+			  -ms-transform: translateY(-50%);
+			  transform: translateY(-50%);
+			}
+			.container:hover .wrapper {
+			  background: #cd201f;
+			}
+			.tri {
+			  width: 0;
+			  height: 0;
+			  border-style: solid;
+			  border-width: 7px 0 7px 14px;
+			  border-color: transparent transparent transparent #ffffff;
+			  margin: 0 auto;
+			}		
+		</style>
+		<!---<script type="text/javascript"></script>--->
+	</head>
+	<body>
+		<div class="container">
+			<div class="wrapper">
+				<div class="tri"></div>
+			</div>
+		</div>
+	</body>
+</html>

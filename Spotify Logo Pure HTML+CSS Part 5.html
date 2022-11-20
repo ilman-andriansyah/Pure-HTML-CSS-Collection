@@ -1,0 +1,97 @@
+<!---Source :  https://codepen.io/NiaB13/pen/qBZzEEW--->
+<html>
+	<head>
+		<title></title>
+		<!--
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		-->
+		<style type="text/css">
+		/*Nia Brewster*/
+
+/*Black Icon */
+.spotify{
+  margin: 100px auto;
+  position: relative;
+  background-color: black;
+  height: 350px;
+  width: 350px;
+  border-radius: 50px;
+  box-shadow: 5px 5px 50px #888888
+  }
+/*Nia Brewster*/
+.circle{
+  margin: 25px 25px ;
+  position: absolute;
+  background-color: #1DB954;
+  height: 300px;
+  width: 300px;
+  border-radius: 250px;
+}
+/* All bar properties*/ 
+.bar{
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  border-radius: 50%;
+  border: 35px solid white;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+/* individual bar rotations, sizes, and positions*/
+.bar1 {
+  transform: rotate(8deg)scale(.7);
+  top: 70px;
+  left: -10px;
+}
+
+.bar2 {
+  transform: rotate(8deg)scale(.6);
+  top: 110px;
+  left: -15px;
+}
+
+.bar3 {
+  transform:rotate(8deg)scale(.5);
+  top: 150px;
+  left: -25px;
+}
+
+/*circles before and after bars to make rounded edges*/
+.bar::before{
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 33.3px;
+  height: 33.3px;
+  border-radius: 50%;
+  background-color:white;
+  top:1.5px;
+  left:1px;
+ }
+
+.bar::after{
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 33.3px;
+  height: 33.3px;
+  border-radius: 50%;
+  background-color:white;
+  top:0px;
+  left:264px;
+}
+/* Nia Brewster */
+		</style>
+		
+	</head>
+	<body>
+	<div class="spotify">
+  <div class="circle"></div>
+  <div class="bar bar1"></div>
+  <div class="bar bar2"></div>
+  <div class="bar bar3"></div>
+</div>
+	</body>
+</html>

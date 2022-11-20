@@ -1,0 +1,190 @@
+<!---Source :  https://codepen.io/howardthomson/pen/xXLBrj--->
+<html>
+	<head>
+		<title></title>
+		<!--
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		-->
+		<style type="text/css">
+@import url("https://fonts.googleapis.com/css?family=Parisienne");
+body {
+  background: linear-gradient(45deg, #eeeeee 0%, #cccccc 100%);
+}
+
+h2 {
+  margin: 0;
+}
+
+.logo {
+  display: block;
+  position: relative;
+  margin: 15px auto;
+  height: 300px;
+  width: 720px;
+}
+
+#audi-logo {
+  background: none;
+}
+#audi-logo .circle {
+  height: 130px;
+  width: 130px;
+  border: 20px solid rgba(255, 255, 255, 0.55);
+  border-radius: 130px;
+  position: absolute;
+  top: 30px;
+  opacity: 0.9;
+}
+#audi-logo h2 {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  font-family: "Verdana", sans-serif;
+  color: #dc1e1e;
+  font-size: 4em;
+}
+#audi-logo #audi1 {
+  left: 130px;
+}
+#audi-logo #audi2 {
+  left: 230px;
+}
+#audi-logo #audi3 {
+  left: 330px;
+}
+#audi-logo #audi4 {
+  left: 430px;
+}
+
+#ford-logo #ford1 {
+  position: absolute;
+  top: 30px;
+  left: 130px;
+  background: linear-gradient(to bottom, #0097d5 0%, #000a3a 100%);
+  height: 200px;
+  width: 500px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px #666;
+}
+#ford-logo #ford2 {
+  position: absolute;
+  top: 37px;
+  left: 136px;
+  height: 176px;
+  width: 477px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0px 0px 6px #000a3a;
+}
+#ford-logo h2 {
+  font-family: "Parisienne", cursive;
+  letter-spacing: -0.007em;
+  color: #fff;
+  position: absolute;
+  top: 55px;
+  width: 100%;
+  text-align: center;
+  font-size: 9em;
+  text-shadow: 2px 2px 5px #000a3a;
+}
+
+#toyota-logo {
+  background: #ff0032;
+}
+#toyota-logo #toyota1 {
+  position: absolute;
+  top: 30px;
+  left: 240px;
+  border: 15px solid #fff;
+  height: 140px;
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px #555;
+  z-index: 20;
+}
+#toyota-logo #toyota2 {
+  position: absolute;
+  top: 34px;
+  left: 280px;
+  height: 40px;
+  width: 120px;
+  border-radius: 50%;
+  border: 15px solid #fff;
+  box-shadow: 0px 0px 10px #555;
+  z-index: 10;
+}
+#toyota-logo #toyota3 {
+  position: absolute;
+  top: 32px;
+  left: 315px;
+  height: 135px;
+  width: 50px;
+  border-radius: 50%;
+  border: 15px solid #fff;
+  box-shadow: 0px 0px 10px #555;
+}
+#toyota-logo h2 {
+  font-family: "Verdana", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+  bottom: 35px;
+  width: 100%;
+  text-align: center;
+  font-size: 2.9em;
+  text-shadow: 0px 0px 10px #555;
+}
+
+@-webkit-keyframes audi-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes audi-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}		
+		</style>
+		<script type="text/javascript">
+		
+		</script>
+	</head>
+	<body>
+<div id="audi-logo" class="logo">
+  <div class="circle" id="audi1"></div>
+  <div class="circle" id="audi2"></div>
+  <div class="circle" id="audi3"></div>
+  <div class="circle" id="audi4"></div>
+  <h2>Audi</h2>
+</div>
+
+<div id="ford-logo" class="logo">
+  <div id="ford1"></div>
+  <div id="ford2"></div>
+  <h2>Ford</h2>
+</div>
+
+<div id="toyota-logo" class="logo">
+  <div id="toyota1"></div>
+  <div id="toyota2"></div>
+  <div id="toyota3"></div>
+  <h2>Toyota</h2>
+</div>	
+	</body>
+</html>

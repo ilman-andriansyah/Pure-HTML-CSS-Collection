@@ -1,0 +1,194 @@
+<!---Source :  https://codepen.io/rodrigomoraes63/pen/kJjhx--->
+<html>
+	<head>
+		<title></title>
+		<!--
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		-->
+		<style type="text/css">
+			@import url(https://fonts.googleapis.com/css?family=Istok+Web:400,700);
+			@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+			*{
+			  margin:0;
+			  padding:0;
+			}
+			body{
+			  background-color: #f6f6f6;
+			}
+			.container{
+			  margin: 0 auto;
+			  width: 960px;
+			  height: 400px;
+			  }
+			.logo{
+			  margin: 0 auto;
+			  width: 270px;
+			  height: 270px;
+			  perspective: 580px;
+			  -webkit-perspective: 580px;
+			  -moz-transform: perspective(580px);
+			  }
+			.base{
+			  width: 225px;
+			  height: 235px;
+			  background: #999;
+			  background-image: linear-gradient(to right, #c4c4c4, #888, #c4c4c4);
+			  margin:  0 auto;
+			  border-radius: 20px;
+			  border-bottom: 1px solid #444;
+			  transform: rotateX(30deg);
+			  box-shadow: 0px 1px 10px #000;
+			  -webkit-border-radius: 20px;
+			  -webkit-border-bottom: 1px solid #444;
+			  -webkit-transform: rotateX(30deg);
+			  -webkit-box-shadow: 0px 1px 10px #000;
+			  -moz-border-radius: 20px;
+			  -moz-border-bottom: 1px solid #444;
+			  -moz-transform: rotateX(30deg);
+			  -moz-box-shadow: 0px 1px 10px #000;
+			  }
+			.base:before{
+			  content: " ";
+			  width:225px;
+			  height: 232px;
+			  background: #d5d5d5;
+			  position: absolute;
+			  top: -4px;
+			  left: 0px;
+			  border-bottom: 1px solid #fff;
+			  border-radius: 20px;
+			  -webkit-border-bottom: 1px solid #fff;
+			  -webkit-border-radius: 20px;
+			  -moz-border-bottom: 1px solid #fff;
+			  -moz-border-radius: 20px;
+			}
+			.base:after{
+			  content: " ";
+			  width:204px;
+			  height: 218px;
+			  background: #000;
+			  position: absolute;
+			  top: -5px;
+			  left: 11px;
+			  border-radius: 15px;
+			  -webkit-border-radius: 15px;
+			  -moz-border-radius: 15px;
+			}
+			.corpo{
+			   width:205px;
+			  height: 199px;
+			  background: #262626;
+			  background-image: linear-gradient(to right, #575757 4%, #262626 15%, #262626 85%, #575757);
+			  position: absolute;
+			  top: 12px;
+			  left: 33px;
+			  border-radius: 25px;
+			  transform: rotateX(30deg);
+			  -webkit-border-radius: 25px;
+			  -webkit-transform: rotateX(30deg);
+			  -moz-border-radius: 25px;
+			  -moz-transform: rotateX(30deg);
+			}
+			.corpo:before{
+			  content: " ";
+			  width:205px;
+			  height: 205px;
+			  background: #4c4c4c;
+			  background-image: linear-gradient(to bottom, #a3a3a3, #585858 50%, #4c4c4c 53%);
+			  position: absolute;
+			  top: -29px;
+			  left:-1px;
+			  border:1px solid #c1c1c1;
+			  border-bottom: 1px solid #b0b0b0;
+			  border-radius: 14px;
+			  transform: rotateX(5deg);
+			  -webkit-border:1px solid #c1c1c1;
+			  -webkit-border-bottom: 1px solid #b0b0b0;
+			  -webkit-border-radius: 14px;
+			  -webkit-transform: rotateX(5deg);
+			  -moz-border:1px solid #c1c1c1;
+			  -moz-border-bottom: 1px solid #b0b0b0;
+			  -moz-border-radius: 14px;
+			  -moz-transform: rotateX(5deg);
+			}
+			.s{
+			  font-family: 'Istok Web', sans-serif;
+			  font-weight: bold;
+			  color: #ff7b00;
+			  font-size: 153px;
+			  position: absolute;
+			  top:-7px;
+			  left:83px;
+			  transform: rotateX(30deg);
+			  text-shadow: 0px 0px 20px #ffb756; 
+			  -webkit-transform: rotateX(30deg);
+			  -webkit-text-shadow: 0px 0px 20px #ffb756; 
+			  -moz-transform: rotateX(30deg);
+			  -moz-text-shadow: 0px 0px 20px #ffb756;
+			  z-index:1;
+			  user-select:none;
+			  -webkit-user-select: none;
+			  -moz-user-select: none;
+			  -ms-user-select: none;
+			  cursor: default;
+			  }
+			.s:before{
+			  content: "S";
+			  color: #000;
+			  position: absolute;
+			  top:-3px;
+			  z-index:-1;
+			  text-shadow:none;
+			  -webkit-text-shadow:none;
+			}
+			.s:after{
+			  content: "S";
+			  color: #fff;
+			  position: absolute;
+			  right: 0px;
+			  z-index:-2;
+			  top:1.6px;
+			  text-shadow: none;
+			  -webkit-text-shadow: none;
+			  -moz-text-shadow: none;
+			  -moz-webkit-text-shadow: none;
+			  
+			}
+
+			h1{
+			  text-align: center;
+			  font-family: 'Open Sans', sans-serif;
+			  font-weight: bold;
+			  color: #444;
+			  -webkit-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+			  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+			}
+			#qrcode{
+			  margin-left: 435px;
+			  margin-top: 20px;
+			  width: 10%;
+			}
+		</style>
+		<script type="text/javascript">
+			//Logo do Sublime Text, feito em CSS Puro
+			//Por Rodrigo Ap 
+			//email: rodrigo_moraes_@hotmail.com
+
+			// Melhor visualizado no IE10, Chrome 32
+
+			//Obrigado!!		
+		</script>
+	</head>
+	<body>
+		<div class="container">
+		  <div class="logo">
+			<div class="base"></div>
+			<div class="corpo"></div>
+			<p class="s">S</p>
+		  </div>
+		  <h1>Logo Sublime Text em CSS puro</h1>
+		  
+		</div>	
+	</body>
+</html>

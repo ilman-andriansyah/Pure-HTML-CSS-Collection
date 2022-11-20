@@ -1,0 +1,145 @@
+<!---Source :  https://codepen.io/rauldronca/pen/rLYkbk--->
+<html>
+	<head>
+		<title></title>
+		<!--
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		-->
+		<style type="text/css">
+/* 
+=======================
+  Basic Stuff
+=======================
+*/
+html,
+body {
+  background-color: #007ee5;
+  width:100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  
+  /*  Centering with Flex  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+=======================
+  Dropbox Logo
+=======================
+*/
+.dropbox-logo {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 150px;
+  user-select: none;
+}
+.dropbox-logo div {
+  position: absolute;
+  background-color: #fff;
+}
+.dropbox-logo div[class*=-hidden] {
+  background-color: #007ee5;
+}
+
+/* ======================= */
+
+.dropbox-logo .box-left {
+  transform: skew(0, 31deg);
+  width: 61px;
+  height: 79px;
+  left: 90px;
+  top: 153px;
+}
+.dropbox-logo .box-right {
+  transform: skew(0, -31deg);
+  width: 61px;
+  height: 79px;
+  left: 151px;
+  top: 153px;
+}
+
+/* ======================= */
+
+.dropbox-logo .left-cover-hidden {
+  transform: skew(-50deg, 34deg);
+  width: 62px;
+  height: 40px;
+  left: 70px;
+  top: 152px;
+}
+.dropbox-logo .right-cover-hidden {
+  transform: skew(50deg, -34deg);
+  width: 62px;
+  height: 40px;
+  left: 170px;
+  top: 152px;
+}
+
+/* ======================= */
+
+.dropbox-logo .top-cover {
+  transform: skew(51deg, -33deg);
+  width: 60px;
+  height: 37px;
+  left: 71px;
+  top: 79px;
+}
+.dropbox-logo .bottom-cover {
+  transform: skew(51deg, -33deg);
+  width: 60px;
+  height: 37px;
+  left: 171px;
+  top: 148px;
+}
+.dropbox-logo .right-cover {
+  transform: skew(-51deg, 33deg);
+  width: 60px;
+  height: 37px;
+  left: 171px;
+  top: 79px;
+}
+.dropbox-logo .left-cover {
+  transform: skew(-51deg, 33deg);
+  width: 60px;
+  height: 37px;
+  left: 71px;
+  top: 148px;
+}
+
+/* ======================= */
+
+.dropbox-logo .box-hidden {
+  transform: skew(-58deg, 32deg);
+  width: 60px;
+  height: 38px;
+  left: 121px;
+  top: 113px;
+}		
+		</style>
+		<script type="text/javascript">
+		
+		</script>
+	</head>
+	<body>
+		<div class="dropbox-logo">
+		  <div class="box-left"></div>
+		  <div class="box-right"></div>
+
+		  <div class="left-cover-hidden"></div>
+		  <div class="right-cover-hidden"></div>
+		  
+		  <div class="top-cover"></div>
+		  <div class="right-cover"></div>
+		  <div class="bottom-cover"></div>
+		  <div class="left-cover"></div>
+		  
+		  <div class="box-hidden"></div>
+		</div>
+	</body>
+</html>

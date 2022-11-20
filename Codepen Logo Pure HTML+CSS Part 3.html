@@ -1,0 +1,68 @@
+<!---Source :  https://codepen.io/mrc/pen/wECrs--->
+<html>
+	<head>
+		<title></title>
+		<!--
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		-->
+		<style type="text/css">
+.code{
+  width:300px;
+  height:300px;
+  background:#373737;
+  border-radius:50%;
+  margin:10px auto;
+}
+#cube {
+  -webkit-transform: rotatex(-35deg) rotatey(45deg);
+  -moz-webkit-transform: rotatex(-35deg) rotatey(45deg);
+  position: relative;
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+  -webkit-transition: -webkit-transform 2s linear;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: -webkit-transform 2s linear;
+  -moz-transform-style: preserve-3d;
+  margin-top:100px;
+  margin-left:90px;
+  position:absolute;
+}
+#cube .side {
+  border: 10px solid #fff;
+  height: 80px;
+  width: 120px;
+  position: absolute;
+}
+#cube .front {
+  -webkit-transform: translateZ(70px);
+  -moz-transform: translateZ(70px);
+}
+#cube .back {
+  -webkit-transform: rotateY(180deg) translateZ(70px);
+  -moz-transform: rotateY(180deg) translateZ(70px);
+}
+#cube .left {
+  -webkit-transform: rotateY(-90deg) translateZ(70px);
+  -moz-transform: rotateY(-90deg) translateZ(70px);
+}
+#cube .right {
+  -webkit-transform: rotateY(90deg) translateZ(70px);
+  -moz-transform: rotateY(-90deg) translateZ(70px);
+}
+		
+		</style>
+		<script type="text/javascript">
+		
+		</script>
+	</head>
+	<body>
+<div class="code"> <div id="cube">
+		<figure class="side front"></figure>
+		<figure class="side back"></figure>
+		<figure class="side left"></figure>
+		<figure class="side right"></figure>
+	</div></div>	
+	</body>
+</html>

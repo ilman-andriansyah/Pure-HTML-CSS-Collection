@@ -1,0 +1,100 @@
+<!---Source :  https://codepen.io/danbender/pen/lbHcD--->
+<html>
+	<head>
+		<title>Pure CSS Apple Logo</title>
+		<!--
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		-->
+		<style type="text/css">
+		body, html {
+		  background: #000;
+		}
+
+		.center {
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  position: absolute;
+		}
+
+		.apple, .motto {
+		  margin: 0 auto;
+		}
+
+		.apple::before,
+		.motto::before {
+		  content: "";
+		  display: block;
+		  width: 7px;
+		  height: 7px;
+		  border-radius: 50%;
+		  top: -7px;
+		  left: -7px;
+		  position: relative;
+		}
+
+		.center:hover .apple::before,
+		.center:hover .motto::before {
+		  animation: move 100ms infinite;
+		}
+
+		@keyframes move {
+		  0% {
+			margin-left: 0;
+			-webkit-filter: grayscale(100%);
+			border-radius: 0;
+		  }
+		  33% {
+			margin: 2px 0 0 2px;
+		  }
+		  66% {
+			margin: -2px 0 0 -2px;
+		  }
+		  100% {
+			margin-left: 0;
+			-webkit-filter: grayscale(100%);
+			border-radius: 0;
+		  }
+		}
+		.apple {
+		  width: 133px;
+		  height: 154px;
+		}
+
+		.apple::before {
+		  box-shadow: 98px 7px #61bb46, 84px 14px #61bb46, 91px 14px #61bb46, 98px 14px #61bb46, 77px 21px #61bb46, 84px 21px #61bb46, 91px 21px #61bb46, 70px 28px #61bb46, 77px 28px #61bb46, 84px 28px #61bb46, 70px 35px #61bb46, 35px 42px #61bb46, 42px 42px #61bb46, 49px 42px #61bb46, 56px 42px #61bb46, 91px 42px #61bb46, 98px 42px #61bb46, 105px 42px #61bb46, 112px 42px #61bb46, 21px 49px #61bb46, 28px 49px #61bb46, 35px 49px #61bb46, 42px 49px #61bb46, 49px 49px #61bb46, 56px 49px #61bb46, 63px 49px #61bb46, 70px 49px #61bb46, 77px 49px #61bb46, 84px 49px #61bb46, 91px 49px #61bb46, 98px 49px #61bb46, 105px 49px #61bb46, 112px 49px #61bb46, 119px 49px #61bb46, 126px 49px #61bb46, 14px 56px #fdb827, 21px 56px #fdb827, 28px 56px #fdb827, 35px 56px #fdb827, 42px 56px #fdb827, 49px 56px #fdb827, 56px 56px #fdb827, 63px 56px #fdb827, 70px 56px #fdb827, 77px 56px #fdb827, 84px 56px #fdb827, 91px 56px #fdb827, 98px 56px #fdb827, 105px 56px #fdb827, 112px 56px #fdb827, 119px 56px #fdb827, 126px 56px #fdb827, 133px 56px #fdb827, 14px 63px #fdb827, 21px 63px #fdb827, 28px 63px #fdb827, 35px 63px #fdb827, 42px 63px #fdb827, 49px 63px #fdb827, 56px 63px #fdb827, 63px 63px #fdb827, 70px 63px #fdb827, 77px 63px #fdb827, 84px 63px #fdb827, 91px 63px #fdb827, 98px 63px #fdb827, 105px 63px #fdb827, 112px 63px #fdb827, 119px 63px #fdb827, 126px 63px #fdb827, 7px 70px #fdb827, 14px 70px #fdb827, 21px 70px #fdb827, 28px 70px #fdb827, 35px 70px #fdb827, 42px 70px #fdb827, 49px 70px #fdb827, 56px 70px #fdb827, 63px 70px #fdb827, 70px 70px #fdb827, 77px 70px #fdb827, 84px 70px #fdb827, 91px 70px #fdb827, 98px 70px #fdb827, 105px 70px #fdb827, 112px 70px #fdb827, 119px 70px #fdb827, 7px 77px #f5821f, 14px 77px #f5821f, 21px 77px #f5821f, 28px 77px #f5821f, 35px 77px #f5821f, 42px 77px #f5821f, 49px 77px #f5821f, 56px 77px #f5821f, 63px 77px #f5821f, 70px 77px #f5821f, 77px 77px #f5821f, 84px 77px #f5821f, 91px 77px #f5821f, 98px 77px #f5821f, 105px 77px #f5821f, 112px 77px #f5821f, 7px 84px #f5821f, 14px 84px #f5821f, 21px 84px #f5821f, 28px 84px #f5821f, 35px 84px #f5821f, 42px 84px #f5821f, 49px 84px #f5821f, 56px 84px #f5821f, 63px 84px #f5821f, 70px 84px #f5821f, 77px 84px #f5821f, 84px 84px #f5821f, 91px 84px #f5821f, 98px 84px #f5821f, 105px 84px #f5821f, 112px 84px #f5821f, 7px 91px #f5821f, 14px 91px #f5821f, 21px 91px #f5821f, 28px 91px #f5821f, 35px 91px #f5821f, 42px 91px #f5821f, 49px 91px #f5821f, 56px 91px #f5821f, 63px 91px #f5821f, 70px 91px #f5821f, 77px 91px #f5821f, 84px 91px #f5821f, 91px 91px #f5821f, 98px 91px #f5821f, 105px 91px #f5821f, 112px 91px #f5821f, 7px 98px #e03a3e, 14px 98px #e03a3e, 21px 98px #e03a3e, 28px 98px #e03a3e, 35px 98px #e03a3e, 42px 98px #e03a3e, 49px 98px #e03a3e, 56px 98px #e03a3e, 63px 98px #e03a3e, 70px 98px #e03a3e, 77px 98px #e03a3e, 84px 98px #e03a3e, 91px 98px #e03a3e, 98px 98px #e03a3e, 105px 98px #e03a3e, 112px 98px #e03a3e, 7px 105px #e03a3e, 14px 105px #e03a3e, 21px 105px #e03a3e, 28px 105px #e03a3e, 35px 105px #e03a3e, 42px 105px #e03a3e, 49px 105px #e03a3e, 56px 105px #e03a3e, 63px 105px #e03a3e, 70px 105px #e03a3e, 77px 105px #e03a3e, 84px 105px #e03a3e, 91px 105px #e03a3e, 98px 105px #e03a3e, 105px 105px #e03a3e, 112px 105px #e03a3e, 119px 105px #e03a3e, 7px 112px #e03a3e, 14px 112px #e03a3e, 21px 112px #e03a3e, 28px 112px #e03a3e, 35px 112px #e03a3e, 42px 112px #e03a3e, 49px 112px #e03a3e, 56px 112px #e03a3e, 63px 112px #e03a3e, 70px 112px #e03a3e, 77px 112px #e03a3e, 84px 112px #e03a3e, 91px 112px #e03a3e, 98px 112px #e03a3e, 105px 112px #e03a3e, 112px 112px #e03a3e, 119px 112px #e03a3e, 126px 112px #e03a3e, 14px 119px #963d97, 21px 119px #963d97, 28px 119px #963d97, 35px 119px #963d97, 42px 119px #963d97, 49px 119px #963d97, 56px 119px #963d97, 63px 119px #963d97, 70px 119px #963d97, 77px 119px #963d97, 84px 119px #963d97, 91px 119px #963d97, 98px 119px #963d97, 105px 119px #963d97, 112px 119px #963d97, 119px 119px #963d97, 126px 119px #963d97, 133px 119px #963d97, 14px 126px #963d97, 21px 126px #963d97, 28px 126px #963d97, 35px 126px #963d97, 42px 126px #963d97, 49px 126px #963d97, 56px 126px #963d97, 63px 126px #963d97, 70px 126px #963d97, 77px 126px #963d97, 84px 126px #963d97, 91px 126px #963d97, 98px 126px #963d97, 105px 126px #963d97, 112px 126px #963d97, 119px 126px #963d97, 126px 126px #963d97, 133px 126px #963d97, 21px 133px #963d97, 28px 133px #963d97, 35px 133px #963d97, 42px 133px #963d97, 49px 133px #963d97, 56px 133px #963d97, 63px 133px #963d97, 70px 133px #963d97, 77px 133px #963d97, 84px 133px #963d97, 91px 133px #963d97, 98px 133px #963d97, 105px 133px #963d97, 112px 133px #963d97, 119px 133px #963d97, 126px 133px #963d97, 28px 140px #009ddc, 35px 140px #009ddc, 42px 140px #009ddc, 49px 140px #009ddc, 56px 140px #009ddc, 63px 140px #009ddc, 70px 140px #009ddc, 77px 140px #009ddc, 84px 140px #009ddc, 91px 140px #009ddc, 98px 140px #009ddc, 105px 140px #009ddc, 112px 140px #009ddc, 119px 140px #009ddc, 35px 147px #009ddc, 42px 147px #009ddc, 49px 147px #009ddc, 56px 147px #009ddc, 63px 147px #009ddc, 70px 147px #009ddc, 77px 147px #009ddc, 84px 147px #009ddc, 91px 147px #009ddc, 98px 147px #009ddc, 105px 147px #009ddc, 112px 147px #009ddc, 42px 154px #009ddc, 49px 154px #009ddc, 56px 154px #009ddc, 91px 154px #009ddc, 98px 154px #009ddc, 105px 154px #009ddc;
+		}
+
+		.motto {
+		  width: 441px;
+		  height: 35px;
+		  margin-top: 35px;
+		}
+
+		.motto::before {
+		  box-shadow: 7px 7px #ffffff, 14px 7px #ffffff, 21px 7px #ffffff, 28px 7px #ffffff, 42px 7px #ffffff, 63px 7px #ffffff, 77px 7px #ffffff, 91px 7px #ffffff, 112px 7px #ffffff, 126px 7px #ffffff, 147px 7px #ffffff, 175px 7px #ffffff, 182px 7px #ffffff, 189px 7px #ffffff, 210px 7px #ffffff, 224px 7px #ffffff, 231px 7px #ffffff, 238px 7px #ffffff, 252px 7px #ffffff, 259px 7px #ffffff, 266px 7px #ffffff, 280px 7px #ffffff, 287px 7px #ffffff, 294px 7px #ffffff, 308px 7px #ffffff, 315px 7px #ffffff, 322px 7px #ffffff, 343px 7px #ffffff, 350px 7px #ffffff, 357px 7px #ffffff, 371px 7px #ffffff, 392px 7px #ffffff, 406px 7px #ffffff, 413px 7px #ffffff, 420px 7px #ffffff, 427px 7px #ffffff, 21px 14px #ffffff, 42px 14px #ffffff, 63px 14px #ffffff, 77px 14px #ffffff, 91px 14px #ffffff, 112px 14px #ffffff, 126px 14px #ffffff, 140px 14px #ffffff, 175px 14px #ffffff, 196px 14px #ffffff, 210px 14px #ffffff, 224px 14px #ffffff, 252px 14px #ffffff, 280px 14px #ffffff, 308px 14px #ffffff, 329px 14px #ffffff, 343px 14px #ffffff, 371px 14px #ffffff, 392px 14px #ffffff, 413px 14px #ffffff, 21px 21px #ffffff, 42px 21px #ffffff, 49px 21px #ffffff, 56px 21px #ffffff, 63px 21px #ffffff, 77px 21px #ffffff, 91px 21px #ffffff, 98px 21px #ffffff, 112px 21px #ffffff, 126px 21px #ffffff, 133px 21px #ffffff, 175px 21px #ffffff, 196px 21px #ffffff, 210px 21px #ffffff, 224px 21px #ffffff, 231px 21px #ffffff, 238px 21px #ffffff, 252px 21px #ffffff, 259px 21px #ffffff, 266px 21px #ffffff, 280px 21px #ffffff, 287px 21px #ffffff, 294px 21px #ffffff, 308px 21px #ffffff, 315px 21px #ffffff, 322px 21px #ffffff, 329px 21px #ffffff, 343px 21px #ffffff, 350px 21px #ffffff, 357px 21px #ffffff, 371px 21px #ffffff, 378px 21px #ffffff, 392px 21px #ffffff, 413px 21px #ffffff, 21px 28px #ffffff, 42px 28px #ffffff, 63px 28px #ffffff, 77px 28px #ffffff, 91px 28px #ffffff, 105px 28px #ffffff, 112px 28px #ffffff, 126px 28px #ffffff, 140px 28px #ffffff, 175px 28px #ffffff, 196px 28px #ffffff, 210px 28px #ffffff, 224px 28px #ffffff, 252px 28px #ffffff, 280px 28px #ffffff, 308px 28px #ffffff, 322px 28px #ffffff, 343px 28px #ffffff, 371px 28px #ffffff, 385px 28px #ffffff, 392px 28px #ffffff, 413px 28px #ffffff, 21px 35px #ffffff, 42px 35px #ffffff, 63px 35px #ffffff, 77px 35px #ffffff, 91px 35px #ffffff, 112px 35px #ffffff, 126px 35px #ffffff, 147px 35px #ffffff, 175px 35px #ffffff, 182px 35px #ffffff, 189px 35px #ffffff, 210px 35px #ffffff, 224px 35px #ffffff, 252px 35px #ffffff, 280px 35px #ffffff, 287px 35px #ffffff, 294px 35px #ffffff, 308px 35px #ffffff, 329px 35px #ffffff, 343px 35px #ffffff, 350px 35px #ffffff, 357px 35px #ffffff, 371px 35px #ffffff, 392px 35px #ffffff, 413px 35px #ffffff, 441px 35px #ffffff;
+		}
+		</style>
+		<script type="text/javascript">
+/*
+Hover for a little extra.
+
+Remix of Nikolay's http://dribbble.com/shots/1270858-8-bit-Apple-logo
+*/		
+		</script>
+	</head>
+	<body>
+<div class="center">
+  <div class="apple"></div>
+  <div class="motto"></div>
+</div>	
+	</body>
+</html>
+
+
+
+
+
+
+

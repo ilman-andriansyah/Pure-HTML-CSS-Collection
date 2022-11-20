@@ -1,0 +1,125 @@
+<!---Source :  https://codepen.io/jxpazmino/pen/NxwmBB--->
+<html>
+	<head>
+		<title></title>
+		<!--
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+		-->
+		<style type="text/css">
+			div {
+				margin: 0;
+				padding: 0;
+			}
+
+			.ring {
+				position: relative;
+				box-sizing: border-box;
+				width: 300px;
+				height: 300px;
+				margin: 50px auto;
+				border: 17px solid #0083ca;
+				border-radius: 225px;
+				background: #fff;
+			}
+
+			.word {
+				position: absolute;
+				top: 98px;
+				left: 23px;
+				width: 226px;
+				height: 62px;
+			}
+
+			.word div {
+				position: absolute;
+			}
+
+			.d {
+				box-sizing: border-box;
+				width: 58px;
+				height: 62px;
+				border: 20px solid #0083ca;
+				border-radius: 0 28px 28px 0;
+			}
+
+			.e {
+				top: -1px;
+				left: 66px;
+				width: 63px;
+				height: 63px;
+				-webkit-transform: rotate(-45deg) skew(12deg,12deg);
+				   -moz-transform: rotate(-45deg) skew(12deg,12deg);
+					-ms-transform: rotate(-45deg) skew(12deg,12deg);
+						transform: rotate(-45deg) skew(12deg,12deg);
+				background: #0083ca;
+			}
+
+			.e_inset {
+				top: 17px;
+				right: -1px;
+				box-sizing: border-box;
+				width: 38px;
+				height: 27px;
+				border-top: #fff solid 6px;
+				border-bottom: #fff solid 6px;
+			}
+
+			.l {
+				width: 42px;
+				height: 62px;
+				background: #0083ca;
+			}
+
+			.alpha {
+				margin-left: 135px;
+			}
+
+			.omega {
+				margin-left: 183px;
+			}
+
+			.l_inset {
+				top: -1px;
+				right: -1px;
+				width: 20px;
+				height: 43px;
+				background: #fff;
+			}		
+		</style>
+		<script type="text/javascript">
+		
+		</script>
+	</head>
+	<body>
+		<div class="ring">
+		  <div class="word">
+			<div class="d outline"></div>
+			<div class="e outline">
+			  <div class="e_inset outline"></div>
+			</div>
+			<div class="l alpha outline">
+			  <div class="l_inset outline"></div>
+			</div>
+			<div class="l omega outline">
+			  <div class="l_inset outline"></div>
+			</div>
+		  </div>
+		</div>
+	</body>
+</html>
+
+
+
+<!---
+Dell Logo
+
+/****************** Animation *****************/
+.ring:hover .outline {
+    box-sizing: border-box;
+    border: 2px dotted #4f4f4f;
+}
+
+/** jxpazmino **/
+
+--->
